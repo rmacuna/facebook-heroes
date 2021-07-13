@@ -6,7 +6,20 @@ module.exports = {
   ],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      backgroundColor: {
+        offWhite: "#FCFCFC",
+      },
+      spacing: {
+        31.5: "7.5rem",
+      },
+      height: {
+        x443: "443px",
+      },
+      lineHeight: {
+        x36: "42.96px",
+      },
+    },
   },
   variants: {
     extend: {},
