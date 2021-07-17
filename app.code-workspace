@@ -5,7 +5,7 @@
     }
   ],
   "settings": {
-    "editor.fontSize": 16,
-    "conventionalCommits.scopes": ["Api"]
+    // "editor.fontSize": 15,
+    "conventionalCommits.scopes": ["Api", "Login"]
   }
 }

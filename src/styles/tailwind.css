@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .separator {
+    height: 1px;
+    @apply w-full bg-gray-300;
+  }
+  .recent-login-card {
+    @apply grid border-dashed relative border-2  w-44 cursor-pointer rounded-lg transform transition-transform active:scale-95;
+    height: 218px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 36px;
+  }
+  .v-center {
+    @apply flex justify-center items-center;
+  }
+}
