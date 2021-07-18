@@ -14,7 +14,7 @@ export default function Home() {
         <nav className="pt-4 ">
           {/* NavigationBar */}
           <div className="max-w-7xl px-10 mx-auto xl:max-w-7xl">
-            <div className="flex justify-between items-center">
+            <div className="flex justify-center lg:justify-between items-center">
               {/* Primary Navigation */}
               <div className="flex items-center ">
                 {/* Facebook logo...*/}
@@ -28,7 +28,7 @@ export default function Home() {
                 </div>
 
                 {/* Navigation list  */}
-                <ul className="flex ">
+                <ul className="hidden lg:flex">
                   <li className="text-gray-500 hover:text-gray-900 text-sm pr-8 font-medium  cursor-pointer">
                     Messenger
                   </li>
@@ -80,17 +80,17 @@ export default function Home() {
           </div>
         </nav>
         <div className="px-14 pt-12 mx-auto xl:max-w-7xl">
-          <div className="flex justify-between  ">
+          <div className="flex flex-col lg:flex-row lg:justify-between ">
             {/* Welcome Header {Component} */}
-            <div className="max-w-lg">
-              <h1 className="text-4xl leading-x36 font-semibold">
+            <div className="max-w-lg order-2 lg:order-1">
+              <h1 className="text-4xl leading-x36 font-semibold hidden lg:block">
                 Facebook helps you <br />
                 <span className="text-blue-500">connect and share</span> with
                 the people who are part of your life.
               </h1>
 
               {/* Recent Login */}
-              <div className="pt-4 ">
+              <div className="pt-4 hidden lg:block">
                 <span className="text-sm text-gray-500">
                   Click your picture or add your recent account
                 </span>
@@ -163,8 +163,8 @@ export default function Home() {
             </div>
 
             {/* Card of login */}
-            <div className="flex flex-col">
-              <section className="max-w-md divide-y-2 w-full  bg-white shadow-xl rounded-md">
+            <div className="flex flex-col order-1 lg:order-2">
+              <section className="lg:max-w-md divide-y-2 w-full border border-gray-200 lg:border-none  bg-white lg:shadow-xl rounded-md">
                 {/* Card Login Header And Content */}
                 <div className="pt-4 pb-2 px-7">
                   <h1 className="text-xl font-semibold pb-6">
@@ -207,7 +207,7 @@ export default function Home() {
                 </div>
               </section>
               {/* Create Page For Bussiness Component */}
-              <span className="text-sm  max-w-md text-center pt-8 text-gray-800">
+              <span className="text-sm  lg:max-w-md text-center pt-8 text-gray-800">
                 <button
                   type="button"
                   className="bg-none hover:underline font-semibold "
