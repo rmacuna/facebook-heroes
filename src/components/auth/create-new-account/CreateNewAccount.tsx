@@ -7,7 +7,21 @@ export default function CreateNewAccount(props: Props) {
   return (
     <>
       <div className="relative w-full lg:w-4/12 my-6 mx-auto md:max-w-3xl ">
-        <motion.div className="border-0 divide-y divide-gray-200 dark:divide-darkGray-light rounded-3xl shadow-lg relative flex flex-col w-full bg-white dark:bg-darkGray outline-none  focus:outline-none">
+        <motion.div
+          initial={{
+            scale: 0.8,
+            y: 200,
+          }}
+          animate={{
+            scale: 1,
+            y: 0,
+          }}
+          transition={{
+            duration: 0.2,
+            ease: "easeOut",
+          }}
+          className="border-0 divide-y divide-gray-200 dark:divide-darkGray-light rounded-3xl shadow-lg relative flex flex-col w-full bg-white dark:bg-darkGray outline-none  focus:outline-none"
+        >
           <div className="py-3 px-4  border-b">
             <h1 className="text-3xl font-bold">Sign Up</h1>
             <p className="text-sm text-gray-600">It’s quick and easy </p>
@@ -64,8 +78,8 @@ export default function CreateNewAccount(props: Props) {
               {/* Month Select */}
               <select
                 className="border flex-auto  border-gray-300 px-1 py-2 rounded-lg"
-                name=""
-                id=""
+                name="month-select"
+                id="month-select"
               >
                 <option disabled value="">
                   Select a month
@@ -87,8 +101,8 @@ export default function CreateNewAccount(props: Props) {
               {/* Day Select */}
               <select
                 className="border mx-2 flex-auto  border-gray-300 px-1 py-2 rounded-lg"
-                name=""
-                id=""
+                name="day-select"
+                id="day-select"
               >
                 <option disabled value="">
                   Select a day
@@ -96,8 +110,8 @@ export default function CreateNewAccount(props: Props) {
                 {[
                   1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
                   19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31,
-                ].map((item) => (
-                  <option key={Date.now()}> {item}</option>
+                ].map((item, i) => (
+                  <option key={Date.now() + i}> {item}</option>
                 ))}
               </select>
 
@@ -111,7 +125,7 @@ export default function CreateNewAccount(props: Props) {
                   Select a year
                 </option>
                 {/* Map the last 80 years and render a option tag */}
-                {[...Array(80)].map((item, index) => (
+                {[...Array(80)].map((_, index) => (
                   <option key={Date.now() + index}> {index + 1970}</option>
                 ))}
               </select>
@@ -143,17 +157,17 @@ export default function CreateNewAccount(props: Props) {
                 {/* Create a Radio Button component (Male) */}
                 <div className="flex-auto flex justify-between items-center border border-gray-300 rounded-lg px-1 py-2">
                   <span>Male</span>
-                  <input type="radio" />
+                  <input name="gender" type="radio" value="male" />
                 </div>
                 {/* Create a Radio Button component (Female) */}
                 <div className="flex-auto mx-2 flex justify-between items-center border border-gray-300 rounded-lg px-1 py-2">
                   <span>Female</span>
-                  <input type="radio" />
+                  <input name="gender" type="radio" value="female" />
                 </div>
                 {/* Create a Radio Button component (Custom) */}
                 <div className="flex-auto flex justify-between items-center border border-gray-300 rounded-lg px-1 py-2">
                   <span>Custom</span>
-                  <input type="radio" />
+                  <input name="gender" type="radio" value="custom" />
                 </div>
               </div>
 

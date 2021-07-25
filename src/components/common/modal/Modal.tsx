@@ -73,6 +73,7 @@ export default function Modal(props: ModalProps) {
         aria-modal="true"
         className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
       >
+        {/* Todo: Improve animation used here... */}
         <motion.div
           onClick={(e: React.MouseEvent<HTMLDivElement>) => onCloseModal(e)}
           className="dialog-overlay"
@@ -82,9 +83,11 @@ export default function Modal(props: ModalProps) {
           animate={{
             opacity: 1,
           }}
+          exit={{ opacity: 0 }}
+          transition={{ ease: "easeOut", duration: 0.4 }}
           aria-hidden="true"
         >
-          <motion.div className="dialog-backdrop"></motion.div>
+          <motion.div className="dialog-backdrop" />
         </motion.div>
         {children}
       </motion.div>

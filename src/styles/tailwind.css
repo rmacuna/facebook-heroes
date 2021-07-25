@@ -24,7 +24,7 @@
     @apply fixed inset-0;
   }
   .dialog-backdrop {
-    @apply absolute inset-0 bg-gray-500 dark:bg-gray-900 opacity-30;
+    @apply absolute inset-0 bg-black dark:bg-gray-900 opacity-40;
   }
   .link {
     @apply text-blue-600 no-underline hover:text-blue-800;

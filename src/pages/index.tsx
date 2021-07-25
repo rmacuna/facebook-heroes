@@ -5,6 +5,7 @@ import FacebookTextLogo from "../assets/facebook_logo.svg";
 import CreateNewAccount from "../components/auth/create-new-account/CreateNewAccount";
 import Modal from "../components/common/modal/Modal";
 import { useModal } from "../hooks/use-modal";
+import { AnimatePresence } from "framer-motion";
 
 export default function Login() {
   const { modalOpen, toggle } = useModal();
@@ -14,8 +15,9 @@ export default function Login() {
       <Modal isOpen={modalOpen} onClose={toggle}>
         <CreateNewAccount />
       </Modal>
+
       <Head>
-        <title>_Facebook</title>
+        <title>Facebook Heroes</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="h-screen bg-offWhite">
