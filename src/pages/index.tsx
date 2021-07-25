@@ -1,11 +1,11 @@
 import Head from "next/head";
+import Link from "next/link";
 import Image from "next/image";
-import CapAmerica from "../assets/captainAmerica.jpeg";
-import FacebookTextLogo from "../assets/facebook_logo.svg";
 import CreateNewAccount from "../components/auth/create-new-account/CreateNewAccount";
 import Modal from "../components/common/modal/Modal";
 import { useModal } from "../hooks/use-modal";
-import { AnimatePresence } from "framer-motion";
+import Layout from "../components/layout/Layout";
+import DailyQuote from "../components/auth/daily-quote/DailyQuote";
 
 export default function Login() {
   const { modalOpen, toggle } = useModal();
@@ -15,12 +15,7 @@ export default function Login() {
       <Modal isOpen={modalOpen} onClose={toggle}>
         <CreateNewAccount />
       </Modal>
-
-      <Head>
-        <title>Facebook Heroes</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <main className="h-screen bg-offWhite">
+      <Layout>
         <nav className="pt-4 ">
           {/* NavigationBar */}
           <div className="max-w-7xl px-10 mx-auto xl:max-w-7xl">
@@ -30,15 +25,15 @@ export default function Login() {
                 {/* Facebook logo...*/}
                 <div className="pr-5">
                   <Image
-                    src={FacebookTextLogo}
+                    src="/facebook_logo.svg"
                     alt="facebook_logo"
-                    width="189"
-                    height="66"
+                    width={189}
+                    height={66}
                   />
                 </div>
 
                 {/* Navigation list  */}
-                <ul className="hidden lg:flex">
+                <ul role="navigation" className="hidden lg:flex">
                   <li className="text-gray-500 hover:text-gray-900 text-sm pr-8 font-medium  cursor-pointer">
                     Messenger
                   </li>
@@ -132,9 +127,11 @@ export default function Login() {
                       </button>
 
                       <Image
-                        src={CapAmerica}
-                        className="object-cover h-48 w-full rounded-lg"
+                        src="/captainAmerica.jpeg"
                         alt="Capitan América"
+                        width="200"
+                        height="200"
+                        className="object-cover h-48 w-full rounded-lg"
                       />
 
                       <div className="v-center">
@@ -177,10 +174,7 @@ export default function Login() {
               <section className="lg:max-w-md divide-y-2 w-full border border-gray-200 lg:border-none  bg-white lg:shadow-xl rounded-md">
                 {/* Card Login Header And Content */}
                 <div className="pt-4 pb-2 px-7">
-                  <h1 className="text-xl font-semibold pb-6">
-                    How about sending someone a message wishing them a happy
-                    day?
-                  </h1>
+                  <DailyQuote />
                   {/* Form */}
                   <form className="pb-6">
                     <div className="w-full pb-3">
@@ -200,14 +194,19 @@ export default function Login() {
                   </form>
                   <div className="pb-4 w-full">
                     {/* Button Component */}
-                    <button className="bg-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-600 hover:bg-blue-600 transition-transform active:transform active:scale-95 font-semibold text-lg text-white w-full p-3 rounded-lg">
+                    <button
+                      role="button"
+                      className="bg-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-600 hover:bg-blue-600 transition-transform active:transform active:scale-95 font-semibold text-lg text-white w-full p-3 rounded-lg"
+                    >
                       Log In
                     </button>
                   </div>
                   <div className="w-full flex justify-center">
-                    <span className="text-blue-500 font-semibold text-sm cursor-pointer hover:text-blue-600 hover:underline">
-                      Forgot your password
-                    </span>
+                    <Link href="/password-recover">
+                      <a className="text-blue-500 font-semibold text-sm cursor-pointer hover:text-blue-600 hover:underline">
+                        Forgot your password
+                      </a>
+                    </Link>
                   </div>
                 </div>
                 <div className="p-6 flex justify-center items-center text-center">
@@ -225,14 +224,15 @@ export default function Login() {
                   type="button"
                   className="bg-none hover:underline font-semibold "
                 >
-                  Crea una página
+                  Create a Page
                 </button>{" "}
-                para un personaje público, un grupo de música o un negocio
+                for a celebrity, band or business.
               </span>
             </div>
           </div>
         </div>
-      </main>
+      </Layout>
+
       <footer className="flex items-center justify-center w-full h-24 border-t">
         footer
       </footer>

@@ -44,7 +44,6 @@ yarn dev
 | **build**          | Contains the distributable (or output) from the react build                                                |
 | **node_modules**   | Contains all the npm dependencies                                                                          |
 | **src**            | Contains the source code that will be compiled to the build dir                                            |
-| **src/assets**     | Assets that are used in this project                                                                       |
 | **src/components** | Components folder organized by features                                                                    |
 | **src/constants**  | Constants that are shared between components                                                               |
 | **src/docs**       | Static docs files that can be used in the Github documentation readme                                      |
