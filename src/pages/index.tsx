@@ -2,10 +2,18 @@ import Head from "next/head";
 import Image from "next/image";
 import CapAmerica from "../assets/captainAmerica.jpeg";
 import FacebookTextLogo from "../assets/facebook_logo.svg";
+import CreateNewAccount from "../components/auth/create-new-account/CreateNewAccount";
+import Modal from "../components/common/modal/Modal";
+import { useModal } from "../hooks/use-modal";
 
-export default function Home() {
+export default function Login() {
+  const { modalOpen, toggle } = useModal();
+
   return (
     <>
+      <Modal isOpen={modalOpen} onClose={toggle}>
+        <CreateNewAccount />
+      </Modal>
       <Head>
         <title>_Facebook</title>
         <link rel="icon" href="/favicon.ico" />
@@ -79,7 +87,7 @@ export default function Home() {
             </div>
           </div>
         </nav>
-        <div className="px-14 pt-12 mx-auto xl:max-w-7xl">
+        <div className="sm:px-14 sm:pt-12 mx-auto xl:max-w-7xl">
           <div className="flex flex-col lg:flex-row lg:justify-between ">
             {/* Welcome Header {Component} */}
             <div className="max-w-lg order-2 lg:order-1">
@@ -201,7 +209,10 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="p-6 flex justify-center items-center text-center">
-                  <button className="bg-secondary-500 focus:outline-none focus:ring-2 focus:ring-green-500 hover:bg-secondary-600 transition-transform active:transform active:scale-95 font-semibold text-lg text-white  p-3 rounded-lg">
+                  <button
+                    onClick={toggle}
+                    className="bg-secondary-500 focus:outline-none focus:ring-2 focus:ring-green-500 hover:bg-secondary-600 transition-transform active:transform active:scale-95 font-semibold text-lg text-white  p-3 rounded-lg"
+                  >
                     Create New Account
                   </button>
                 </div>

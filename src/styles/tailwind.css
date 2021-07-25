@@ -16,4 +16,20 @@
   .v-center {
     @apply flex justify-center items-center;
   }
+
+  .dialog {
+    @apply justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none;
+  }
+  .dialog-overlay {
+    @apply fixed inset-0;
+  }
+  .dialog-backdrop {
+    @apply absolute inset-0 bg-gray-500 dark:bg-gray-900 opacity-30;
+  }
+  .link {
+    @apply text-blue-600 no-underline hover:text-blue-800;
+  }
+  .button {
+    @apply focus:outline-none transition-all focus:ring-2 active:transform active:scale-95 font-semibold  rounded-lg;
+  }
 }
