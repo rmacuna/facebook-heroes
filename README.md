@@ -6,4 +6,4 @@
   <br>
 </h1>
 
-<h4 align="center">A minimal functional clone of Facebook made for the Avengers to share their experiences.</h4>
+<h4 align="center">A minimal functional clone of Facebook made for the heroes to share their experiences across the universe</h4>
