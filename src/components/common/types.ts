@@ -1,3 +1,5 @@
+import { PropsWithChildren } from "react";
+
 export interface ModalProps {
   /** Show or hide modal */
   isOpen: boolean;
@@ -22,3 +24,14 @@ export interface RecentLoginProps {
   /** Src of the profile image */
   src: string;
 }
+
+interface FCButtonProps {
+  /** If the button is disabled */
+  isDisabled?: boolean;
+  /**Type of the style in the button*/
+  type?: "primary" | "secondary";
+  /** Text color of the button */
+  size?: "sm" | "md";
+}
+
+export interface FCButton extends PropsWithChildren<FCButtonProps> {}

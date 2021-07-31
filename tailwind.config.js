@@ -10,6 +10,18 @@ module.exports = {
       backgroundColor: {
         offWhite: "#FCFCFC",
         blackTransparent: "rgba(0,0,0,25%)",
+        primary: {
+          50: "#f3f8fe",
+          100: "#e8f1fe",
+          200: "#c5ddfc",
+          300: "#a3c9fa",
+          400: "#5da0f6",
+          500: "#1877f2",
+          600: "#166bda",
+          700: "#1259b6",
+          800: "#0e4791",
+          900: "#0c3a77",
+        },
         secondary: {
           50: "#f6fbf4",
           100: "#ecf8ea",

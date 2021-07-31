@@ -8,6 +8,7 @@ import Layout from "../components/layout/Layout";
 import DailyQuote from "../components/auth/daily-quote/DailyQuote";
 import Navbar from "../components/layout/navbar/Navbar";
 import WelcomeSection from "../components/auth/welcome/WelcomeSection";
+import FButton from "../components/common/button/FButton";
 
 export default function Login() {
   const { modalOpen, toggle } = useModal();
@@ -55,12 +56,7 @@ export default function Login() {
                   </form>
                   <div className="pb-4 w-full">
                     {/* Button Component */}
-                    <button
-                      role="button"
-                      className="bg-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-600 hover:bg-blue-600 transition-transform active:transform active:scale-95 font-semibold text-lg text-white w-full p-3 rounded-lg"
-                    >
-                      Log In
-                    </button>
+                    <FButton>Log In</FButton>
                   </div>
                   <div className="w-full flex justify-center">
                     <Link href="/password-recover">
