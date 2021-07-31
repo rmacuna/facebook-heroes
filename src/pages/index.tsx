@@ -6,6 +6,7 @@ import Modal from "../components/common/modal/Modal";
 import { useModal } from "../hooks/use-modal";
 import Layout from "../components/layout/Layout";
 import DailyQuote from "../components/auth/daily-quote/DailyQuote";
+import Navbar from "../components/layout/navbar/Navbar";
 
 export default function Login() {
   const { modalOpen, toggle } = useModal();
@@ -16,74 +17,10 @@ export default function Login() {
         <CreateNewAccount />
       </Modal>
       <Layout>
-        <nav className="pt-4 ">
-          {/* NavigationBar */}
-          <div className="max-w-7xl px-10 mx-auto xl:max-w-7xl">
-            <div className="flex justify-center lg:justify-between items-center">
-              {/* Primary Navigation */}
-              <div className="flex items-center ">
-                {/* Facebook logo...*/}
-                <div className="pr-5">
-                  <Image
-                    src="/facebook_logo.svg"
-                    alt="facebook_logo"
-                    width={189}
-                    height={66}
-                  />
-                </div>
+        {/* Navbar */}
+        <Navbar />
+        {/* Content */}
 
-                {/* Navigation list  */}
-                <ul role="navigation" className="hidden lg:flex">
-                  <li className="text-gray-500 hover:text-gray-900 text-sm pr-8 font-medium  cursor-pointer">
-                    Messenger
-                  </li>
-                  <li className="text-gray-500 hover:text-gray-900 text-sm pr-8 font-medium cursor-pointer">
-                    Facebook Lite
-                  </li>
-                  <li className="text-gray-500 hover:text-gray-900 text-sm pr-8 font-medium cursor-pointer">
-                    Whatsapp
-                  </li>
-                  <li className="text-gray-500 hover:text-gray-900 text-sm pr-8 font-medium cursor-pointer">
-                    Instagram
-                  </li>
-                  <li className="text-gray-500 hover:text-gray-900 text-sm pr-8 font-medium cursor-pointer">
-                    Careers
-                  </li>
-                  <li className="text-gray-500 hover:text-gray-900 text-sm pr-8 font-medium cursor-pointer">
-                    Others
-                  </li>
-                </ul>
-              </div>
-
-              {/* Language pick up */}
-              <div>
-                <div className="flex flex-col items-end">
-                  <span className="text-xs text-gray-500">Language</span>
-                  <span className="flex cursor-pointer items-center text-black">
-                    <div className="pr-3">
-                      <svg
-                        width="16"
-                        height="16"
-                        viewBox="0 0 16 16"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M2.66663 6L7.99996 11.3333L13.3333 6"
-                          stroke="black"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                      </svg>
-                    </div>
-                    English
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </nav>
         <div className="sm:px-14 sm:pt-12 mx-auto xl:max-w-7xl">
           <div className="flex flex-col lg:flex-row lg:justify-between ">
             {/* Welcome Header {Component} */}

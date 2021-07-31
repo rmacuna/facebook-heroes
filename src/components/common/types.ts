@@ -6,3 +6,10 @@ export interface ModalProps {
   /** Content of the modal  */
   children: React.ReactNode;
 }
+
+export interface NavigationItemProps {
+  /** Title of the navigation item */
+  title: string;
+  /** Id of the navigation item */
+  id: string;
+}
