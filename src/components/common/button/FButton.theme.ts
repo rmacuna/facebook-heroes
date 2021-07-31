@@ -10,5 +10,5 @@ export const ButtonSize = {
 };
 
 export const BaseButton = {
-  base: "rounded-lg w-full disabled:bg-gray-300 disabled:text-gray-800 transition-all  active:transform active:scale-95 focus:outline-none focus:ring-2",
+  base: "rounded-lg font-semibold w-full disabled:bg-gray-300 disabled:text-gray-800 transition-all  active:transform active:scale-95 focus:outline-none focus:ring-2",
 };

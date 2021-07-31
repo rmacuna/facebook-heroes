@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useCallback, ReactNode } from "react";
+import { useEffect, useMemo, useCallback } from "react";
 import { createPortal } from "react-dom";
 import { ModalProps } from "../types";
 import { motion } from "framer-motion";

@@ -14,6 +14,7 @@ describe("When a button without props is displayed", () => {
     expect(
       buttonWithChildren.classList.contains("bg-primary-500")
     ).toBeTruthy();
+    expect(buttonWithChildren.classList.contains("font-semibold")).toBeTruthy();
     expect(buttonWithChildren.textContent).toBe("Primary Button");
   });
 });

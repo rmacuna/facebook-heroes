@@ -11,6 +11,7 @@ export default function RecentLoginList({ recentLoginList }: Props) {
       {recentLoginList.map((recentLogin) => (
         <RecentLogin key={recentLogin.date} recentLogin={recentLogin} />
       ))}
+      <RecentLogin />
     </ul>
   );
 }

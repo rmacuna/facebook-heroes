@@ -1,4 +1,3 @@
-import React from "react";
 import { FCButton } from "../types";
 import { BaseButton, ButtonSize, ButtonType } from "./FButton.theme";
 

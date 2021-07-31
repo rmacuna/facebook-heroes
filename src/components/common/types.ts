@@ -1,4 +1,8 @@
-import { PropsWithChildren } from "react";
+import {
+  DetailedHTMLProps,
+  InputHTMLAttributes,
+  PropsWithChildren,
+} from "react";
 
 export interface ModalProps {
   /** Show or hide modal */
@@ -25,9 +29,12 @@ export interface RecentLoginProps {
   src: string;
 }
 
-interface FCButtonProps {
-  /** If the button is disabled */
+interface Disabable {
+  /** If the component state is disabled */
   isDisabled?: boolean;
+}
+
+interface FCButtonProps extends Disabable {
   /**Type of the style in the button*/
   type?: "primary" | "secondary";
   /** Text color of the button */
@@ -35,3 +42,12 @@ interface FCButtonProps {
 }
 
 export interface FCButton extends PropsWithChildren<FCButtonProps> {}
+
+type BaseInputProps = DetailedHTMLProps<
+  InputHTMLAttributes<HTMLInputElement>,
+  HTMLInputElement
+>;
+export interface FCInputProps extends Disabable, BaseInputProps {
+  // type?: string;
+  // placeholder?: string;
+}
