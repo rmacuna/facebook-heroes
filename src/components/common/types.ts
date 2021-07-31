@@ -13,3 +13,12 @@ export interface NavigationItemProps {
   /** Id of the navigation item */
   id: string;
 }
+
+export interface RecentLoginProps {
+  /** Name of the login */
+  name: string;
+  /** Date of the login */
+  date: string;
+  /** Src of the profile image */
+  src: string;
+}

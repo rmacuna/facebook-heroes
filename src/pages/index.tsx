@@ -7,6 +7,7 @@ import { useModal } from "../hooks/use-modal";
 import Layout from "../components/layout/Layout";
 import DailyQuote from "../components/auth/daily-quote/DailyQuote";
 import Navbar from "../components/layout/navbar/Navbar";
+import WelcomeSection from "../components/auth/welcome/WelcomeSection";
 
 export default function Login() {
   const { modalOpen, toggle } = useModal();
@@ -25,85 +26,8 @@ export default function Login() {
           <div className="flex flex-col lg:flex-row lg:justify-between ">
             {/* Welcome Header {Component} */}
             <div className="max-w-lg order-2 lg:order-1">
-              <h1 className="text-4xl leading-x36 font-semibold hidden lg:block">
-                Facebook helps you <br />
-                <span className="text-blue-500">connect and share</span> with
-                the people who are part of your life.
-              </h1>
-
+              <WelcomeSection />
               {/* Recent Login */}
-              <div className="pt-4 hidden lg:block">
-                <span className="text-sm text-gray-500">
-                  Click your picture or add your recent account
-                </span>
-                <div className="pt-2">
-                  <ul className="flex m-0">
-                    {/* RecentLogin (Value) */}
-                    <li className="recent-login-card mr-2 border-solid group">
-                      {/* Badge */}
-                      <span className="text-white -m-2 absolute right-0 top-0 z-10 rounded-full w-6 h-6 v-center bg-accent text-sm">
-                        4
-                      </span>
-                      <button className="absolute z-10  transition-colors group-hover:shadow-lg group-hover:bg-white left-0 top-0 m-2 w-6 h-6   rounded-full bg-blackTransparent">
-                        <div className="w-full v-center group-hover:text-black text-white transition-colors ">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="h-4 w-4"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth={2}
-                              d="M6 18L18 6M6 6l12 12"
-                            />
-                          </svg>
-                        </div>
-                      </button>
-
-                      <Image
-                        src="/captainAmerica.jpeg"
-                        alt="Capitan América"
-                        width="200"
-                        height="200"
-                        className="object-cover h-48 w-full rounded-lg"
-                      />
-
-                      <div className="v-center">
-                        <span className=" text-lg p-2 font-semibold cursor-pointer">
-                          Steve Rogers
-                        </span>
-                      </div>
-                    </li>
-                    {/* RecentLogin (No Value) */}
-                    <li className="recent-login-card">
-                      <div className="bg-gray-100 v-center">
-                        <div className="text-blue-500">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="h-5 w-5"
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                          >
-                            <path
-                              fillRule="evenodd"
-                              d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z"
-                              clipRule="evenodd"
-                            />
-                          </svg>
-                        </div>
-                      </div>
-                      <div className="v-center">
-                        <button className="bg-none text-blue-500 hover:underline">
-                          Add Account
-                        </button>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
             </div>
 
             {/* Card of login */}
