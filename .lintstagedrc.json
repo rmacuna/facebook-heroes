@@ -1,3 +1,6 @@
 {
-  "src/**/*.{ts,tsx}": ["yarn lint", "yarn format"]
+  "src/**/*.{ts,tsx}": [
+    "yarn lint",
+    "yarn format"
+  ]
 }
