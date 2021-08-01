@@ -3,7 +3,9 @@
  */
 
 import React from "react";
+
 import { render, screen } from "@testing-library/react";
+
 import RecoverPassword from "../pages/password-recover";
 
 it("Should render the Recover Page", () => {

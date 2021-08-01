@@ -52,4 +52,5 @@ type BaseInputProps = DetailedHTMLProps<
 export interface FCInputProps extends Disabable, BaseInputProps {
   // type?: string;
   // placeholder?: string;
+  inputSize?: "sm" | "md";
 }

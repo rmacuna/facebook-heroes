@@ -1,5 +1,7 @@
-import Link from "next/link";
 import React from "react";
+
+import Link from "next/link";
+
 import { useModal } from "../../../hooks/use-modal";
 import FButton from "../../common/button/FButton";
 import Modal from "../../common/modal/Modal";
@@ -15,38 +17,38 @@ export default function LoginCard() {
         <CreateNewAccount />
       </Modal>
       <div className="flex flex-col order-1 lg:order-2">
-        <section className="lg:max-w-md divide-y-2 w-full border border-gray-200 lg:border-none  bg-white lg:shadow-xl rounded-md">
+        <section className="w-full bg-white border border-gray-200 lg:max-w-md divide-y-2 lg:border-none lg:shadow-xl rounded-md">
           {/* Card Login Header And Content */}
           <div className="pt-4 pb-2 px-7">
             <DailyQuote />
             {/* Form */}
             <LoginForm />
-            <div className="pb-4 w-full">
+            <div className="w-full pb-4">
               {/* Button Component */}
               <FButton>Log In</FButton>
             </div>
-            <div className="w-full flex justify-center">
+            <div className="flex justify-center w-full">
               <Link href="/password-recover">
-                <a className="text-blue-500 font-semibold text-sm cursor-pointer hover:text-blue-600 hover:underline">
+                <a className="text-sm font-semibold text-blue-500 cursor-pointer hover:text-blue-600 hover:underline">
                   Forgot your password
                 </a>
               </Link>
             </div>
           </div>
-          <div className="p-6 flex justify-center items-center text-center">
+          <div className="flex items-center justify-center p-6 text-center">
             <button
               onClick={toggle}
-              className="bg-secondary-500 focus:outline-none focus:ring-2 focus:ring-green-500 hover:bg-secondary-600 transition-transform active:transform active:scale-95 font-semibold text-lg text-white  p-3 rounded-lg"
+              className="p-3 text-lg font-semibold text-white rounded-lg bg-secondary-500 focus:outline-none focus:ring-2 focus:ring-green-500 hover:bg-secondary-600 transition-transform active:transform active:scale-95"
             >
               Create New Account
             </button>
           </div>
         </section>
         {/* Create Page For Bussiness Component */}
-        <span className="text-sm  lg:max-w-md text-center pt-8 text-gray-800">
+        <span className="pt-8 text-sm text-center text-gray-800 lg:max-w-md">
           <button
             type="button"
-            className="bg-none hover:underline font-semibold "
+            className="font-semibold bg-none hover:underline"
           >
             Create a Page
           </button>{" "}

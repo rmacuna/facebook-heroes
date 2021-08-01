@@ -4,7 +4,7 @@ export default function NavLanguagePicker() {
   return (
     <div role="combobox" className="flex flex-col items-end">
       <span className="text-xs text-gray-500">Language</span>
-      <span className="flex cursor-pointer items-center text-black">
+      <span className="flex items-center text-black cursor-pointer">
         <div className="pr-3">
           <svg
             width="16"

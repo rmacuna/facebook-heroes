@@ -3,9 +3,11 @@
  */
 
 import React from "react";
+
 import { render, screen } from "@testing-library/react";
-import DailyQuote from "../DailyQuote";
+
 import QUOTES from "../../../../constants/quotes";
+import DailyQuote from "../DailyQuote";
 
 test("It should render a DailyQuote", () => {
   render(<DailyQuote />);

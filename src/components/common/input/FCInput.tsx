@@ -4,11 +4,11 @@ import { FCInputBase, FCInputSize } from "./FCInput.theme";
 export default function FCInput({
   type,
   placeholder,
-  size,
+  inputSize,
   isDisabled,
   ...props
 }: FCInputProps) {
-  const classNames = FCInputBase.base + " " + FCInputSize[size];
+  const classNames = FCInputBase.base + " " + FCInputSize[inputSize];
 
   return (
     <>
@@ -28,4 +28,5 @@ FCInput.defaultProps = {
   type: "text",
   placeholder: "Please type something...",
   isDisabled: false,
+  inputSize: "md",
 };

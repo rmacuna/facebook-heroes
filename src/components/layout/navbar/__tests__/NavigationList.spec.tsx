@@ -2,7 +2,9 @@
  * @jest-environment jsdom
  */
 import * as React from "react";
+
 import { screen, render, within } from "@testing-library/react";
+
 import NavigationList from "../NavigationList";
 
 const navigationLinks = [

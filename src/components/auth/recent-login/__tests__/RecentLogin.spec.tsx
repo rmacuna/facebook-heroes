@@ -3,7 +3,9 @@
  */
 
 import * as React from "react";
+
 import { render } from "@testing-library/react";
+
 import RecentLogin from "../RecentLogin";
 
 describe("When you have a recent login", () => {
