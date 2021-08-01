@@ -36,9 +36,11 @@ interface Disabable {
 
 interface FCButtonProps extends Disabable {
   /**Type of the style in the button*/
-  type?: "primary" | "secondary";
+  type?: "primary" | "secondary" | "ghost";
   /** Text color of the button */
   size?: "sm" | "md";
+
+  onClick?();
 }
 
 export interface FCButton extends PropsWithChildren<FCButtonProps> {}

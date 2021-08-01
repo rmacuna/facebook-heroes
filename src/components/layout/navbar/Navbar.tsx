@@ -38,7 +38,9 @@ export default function Navbar() {
         <div className="max-w-7xl px-10 mx-auto xl:max-w-7xl">
           <div className="flex justify-center lg:justify-between items-center">
             <div className="flex items-center">
-              <NavLogo />
+              <div className="pr-5">
+                <NavLogo />
+              </div>
               <NavigationList navigationLinks={navigationLinks} />
             </div>
             <NavLanguagePicker />

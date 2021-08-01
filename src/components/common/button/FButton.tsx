@@ -6,6 +6,7 @@ export default function FButton({
   children,
   type,
   size,
+  onClick,
 }: FCButton) {
   const classNames =
     BaseButton.base + " " + ButtonType[type] + " " + ButtonSize[size];
@@ -16,6 +17,7 @@ export default function FButton({
       disabled={isDisabled}
       type="button"
       role="button"
+      onClick={onClick}
     >
       {children}
     </button>
