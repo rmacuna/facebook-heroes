@@ -8,10 +8,12 @@
 # testing
 /coverage
 
+
 # next.js
 /.next/
 /out/
 
+.lintstagedrc.json
 # production
 /build
 
