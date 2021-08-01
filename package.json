@@ -13,7 +13,7 @@
     "lint": "eslint src --fix"
   },
   "lint-staged": {
-    "src/**/*.{ts,tsx}": [
+    "./src/**/*.{ts,tsx,js}": [
       "yarn lint",
       "yarn format"
     ]
@@ -38,16 +38,11 @@
     "babel-jest": "^27.0.6",
     "babel-plugin-module-resolver": "^4.1.0",
     "eslint": "^7.32.0",
-    "eslint-config-airbnb": "^18.2.1",
     "eslint-config-next": "^11.0.1",
     "eslint-config-prettier": "^8.3.0",
     "eslint-import-resolver-babel-module": "^5.3.1",
-    "eslint-plugin-import": "^2.23.4",
     "eslint-plugin-jest-dom": "^3.9.0",
-    "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-prettier": "^3.4.0",
-    "eslint-plugin-react": "^7.24.0",
-    "eslint-plugin-react-hooks": "^4.2.0",
     "eslint-plugin-tailwind": "^0.2.1",
     "eslint-plugin-unused-imports": "^1.1.2",
     "husky": "^7.0.1",
