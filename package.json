@@ -54,6 +54,7 @@
     "jest": "^27.0.6",
     "jest-dom": "^4.0.0",
     "jest-transform-stub": "^2.0.0",
+    "lint-staged": "^11.1.1",
     "postcss": "^8.3.5",
     "prettier": "^2.3.2",
     "tailwindcss": "^2.2.4",
