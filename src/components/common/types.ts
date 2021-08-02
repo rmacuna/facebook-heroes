@@ -18,6 +18,8 @@ export interface NavigationItemProps {
   title: string;
   /** Id of the navigation item */
   id: string;
+  /** Path of the navigation item */
+  path: string;
 }
 
 export interface RecentLoginProps {

@@ -1,36 +1,7 @@
-import React from "react";
-
-import { NavigationItemProps } from "../../common/types";
+import { navigationLinks } from "./navbar.constants";
 import NavigationList from "./NavigationList";
 import NavLanguagePicker from "./NavLanguagePicker";
 import NavLogo from "./NavLogo";
-
-const navigationLinks = [
-  {
-    id: "nav_messenger",
-    title: "Messenger",
-  },
-  {
-    id: "nav_fb_lite",
-    title: "Facebook Lite",
-  },
-  {
-    id: "nav_whatsapp",
-    title: "WhatsApp",
-  },
-  {
-    id: "nav_instagram",
-    title: "Instagram",
-  },
-  {
-    id: "nav_careers",
-    title: "Careers",
-  },
-  {
-    id: "nav_more",
-    title: "More",
-  },
-] as NavigationItemProps[];
 
 export default function Navbar() {
   return (

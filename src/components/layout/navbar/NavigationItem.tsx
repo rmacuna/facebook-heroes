@@ -1,14 +1,15 @@
-import React from "react";
-
 type Props = {
   value: string;
+  path: string;
 };
 
-export default function NavigationItem({ value }: Props) {
+export default function NavigationItem({ value, path }: Props) {
   return (
     <>
       <li role="listitem" className="navigation-item">
-        {value}
+        <a href={path} rel="noreferrer" target="_blank">
+          {value}
+        </a>
       </li>
     </>
   );

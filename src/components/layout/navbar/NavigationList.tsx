@@ -9,8 +9,8 @@ type Props = {
 export default function NavigationList({ navigationLinks }: Props) {
   return (
     <ul role="list" className="hidden lg:flex">
-      {navigationLinks.map(({ id, title }) => (
-        <NavigationItem key={id} value={title} />
+      {navigationLinks.map(({ id, path, title }) => (
+        <NavigationItem key={id} value={title} path={path} />
       ))}
     </ul>
   );
