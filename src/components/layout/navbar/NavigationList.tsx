@@ -1,4 +1,5 @@
 import React from "react";
+
 import { NavigationItemProps } from "../../common/types";
 import NavigationItem from "./NavigationItem";
 

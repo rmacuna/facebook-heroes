@@ -1,7 +1,9 @@
 import { useEffect, useMemo, useCallback } from "react";
-import { createPortal } from "react-dom";
-import { ModalProps } from "../types";
+
 import { motion } from "framer-motion";
+import { createPortal } from "react-dom";
+
+import { ModalProps } from "../types";
 
 type PortalProps = {
   children: React.ReactNode;
@@ -71,7 +73,7 @@ export default function Modal(props: ModalProps) {
       <motion.div
         role="dialog"
         aria-modal="true"
-        className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
+        className="fixed inset-0 z-50 flex items-center justify-center overflow-x-hidden overflow-y-auto outline-none focus:outline-none"
       >
         {/* Todo: Improve animation used here... */}
         <motion.div

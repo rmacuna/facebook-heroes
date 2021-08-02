@@ -1,4 +1,5 @@
 import React from "react";
+
 import { motion } from "framer-motion";
 
 type Props = {};
@@ -6,7 +7,7 @@ type Props = {};
 export default function CreateNewAccount(props: Props) {
   return (
     <>
-      <div className="relative w-full lg:w-4/12 my-6 mx-auto md:max-w-3xl ">
+      <div className="relative w-full mx-auto my-6 lg:w-4/12 md:max-w-3xl">
         <motion.div
           initial={{
             scale: 0.8,
@@ -20,49 +21,49 @@ export default function CreateNewAccount(props: Props) {
             duration: 0.2,
             ease: "easeOut",
           }}
-          className="border-0 divide-y divide-gray-200 dark:divide-darkGray-light rounded-3xl shadow-lg relative flex flex-col w-full bg-white dark:bg-darkGray outline-none  focus:outline-none"
+          className="relative flex flex-col w-full bg-white border-0 shadow-lg outline-none divide-y divide-gray-200 dark:divide-darkGray-light rounded-3xl dark:bg-darkGray focus:outline-none"
         >
-          <div className="py-3 px-4  border-b">
+          <div className="px-4 py-3 border-b">
             <h1 className="text-3xl font-bold">Sign Up</h1>
             <p className="text-sm text-gray-600">It’s quick and easy </p>
           </div>
-          <div className="py-3 px-4">
+          <div className="px-4 py-3">
             {/* Input Component */}
 
             <div className="flex pb-2">
               <input
                 type="text"
                 placeholder="First name"
-                className="py-2 px-4 mr-3 border border-gray-300 bg-gray-100 w-full rounded-lg"
+                className="w-full px-4 py-2 mr-3 bg-gray-100 border border-gray-300 rounded-lg"
               />
 
               <input
                 type="text"
                 placeholder="Last name"
-                className="py-2 px-4 border border-gray-300 bg-gray-100 w-full rounded-lg"
+                className="w-full px-4 py-2 bg-gray-100 border border-gray-300 rounded-lg"
               />
             </div>
 
             <input
               type="email"
               placeholder="Mobile number of email"
-              className="py-2 px-4 mr-3 mb-2 border border-gray-300 bg-gray-100 w-full rounded-lg"
+              className="w-full px-4 py-2 mb-2 mr-3 bg-gray-100 border border-gray-300 rounded-lg"
             />
 
             <input
               type="password"
               placeholder="New password"
-              className="py-2 px-4 mr-3 mb-3  border border-gray-300 bg-gray-100 w-full rounded-lg"
+              className="w-full px-4 py-2 mb-3 mr-3 bg-gray-100 border border-gray-300 rounded-lg"
             />
 
             {/* New section: Date of birthday */}
 
             <div className="flex items-center pb-1">
-              <h6 className="text-gray-600 font-semibold text-xs">Birthday</h6>
-              <span className="text-gray-500 text-sm pl-1">
+              <h6 className="text-xs font-semibold text-gray-600">Birthday</h6>
+              <span className="pl-1 text-sm text-gray-500">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-4 w-4"
+                  className="w-4 h-4"
                   viewBox="0 0 20 20"
                   fill="currentColor"
                 >
@@ -74,10 +75,10 @@ export default function CreateNewAccount(props: Props) {
                 </svg>
               </span>
             </div>
-            <div className="flex w-full items-center">
+            <div className="flex items-center w-full">
               {/* Month Select */}
               <select
-                className="border flex-auto  border-gray-300 px-1 py-2 rounded-lg"
+                className="flex-auto px-1 py-2 border border-gray-300 rounded-lg"
                 name="month-select"
                 id="month-select"
               >
@@ -100,7 +101,7 @@ export default function CreateNewAccount(props: Props) {
 
               {/* Day Select */}
               <select
-                className="border mx-2 flex-auto  border-gray-300 px-1 py-2 rounded-lg"
+                className="flex-auto px-1 py-2 mx-2 border border-gray-300 rounded-lg"
                 name="day-select"
                 id="day-select"
               >
@@ -117,7 +118,7 @@ export default function CreateNewAccount(props: Props) {
 
               {/* Year Select */}
               <select
-                className="border flex-auto  border-gray-300 px-1 py-2 rounded-lg"
+                className="flex-auto px-1 py-2 border border-gray-300 rounded-lg"
                 name=""
                 id=""
               >
@@ -133,13 +134,13 @@ export default function CreateNewAccount(props: Props) {
 
             {/* New section: Select Gender */}
 
-            <div className="pt-2 flex flex-col">
+            <div className="flex flex-col pt-2">
               <div className="flex items-center pb-1 ">
-                <h6 className="text-gray-600 font-semibold text-xs">Gender</h6>
-                <span className="text-gray-500 text-sm pl-1">
+                <h6 className="text-xs font-semibold text-gray-600">Gender</h6>
+                <span className="pl-1 text-sm text-gray-500">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-4 w-4"
+                    className="w-4 h-4"
                     viewBox="0 0 20 20"
                     fill="currentColor"
                   >
@@ -153,19 +154,19 @@ export default function CreateNewAccount(props: Props) {
               </div>
 
               {/* Gender seleccion */}
-              <div className="flex w-full items-center">
+              <div className="flex items-center w-full">
                 {/* Create a Radio Button component (Male) */}
-                <div className="flex-auto flex justify-between items-center border border-gray-300 rounded-lg px-1 py-2">
+                <div className="flex items-center justify-between flex-auto px-1 py-2 border border-gray-300 rounded-lg">
                   <span>Male</span>
                   <input name="gender" type="radio" value="male" />
                 </div>
                 {/* Create a Radio Button component (Female) */}
-                <div className="flex-auto mx-2 flex justify-between items-center border border-gray-300 rounded-lg px-1 py-2">
+                <div className="flex items-center justify-between flex-auto px-1 py-2 mx-2 border border-gray-300 rounded-lg">
                   <span>Female</span>
                   <input name="gender" type="radio" value="female" />
                 </div>
                 {/* Create a Radio Button component (Custom) */}
-                <div className="flex-auto flex justify-between items-center border border-gray-300 rounded-lg px-1 py-2">
+                <div className="flex items-center justify-between flex-auto px-1 py-2 border border-gray-300 rounded-lg">
                   <span>Custom</span>
                   <input name="gender" type="radio" value="custom" />
                 </div>
@@ -191,8 +192,8 @@ export default function CreateNewAccount(props: Props) {
               </div>
 
               {/* Sign up button */}
-              <div className="pt-6 flex justify-center">
-                <button className="button p-3 w-full focus:ring-green-800 bg-secondary-500 hover:bg-secondary-700 text-white">
+              <div className="flex justify-center pt-6">
+                <button className="w-full p-3 text-white button focus:ring-green-800 bg-secondary-500 hover:bg-secondary-700">
                   Sign Up
                 </button>
               </div>

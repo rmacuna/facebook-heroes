@@ -1,5 +1,6 @@
 export const FCInputSize = {
-  sm: "h-12",
+  sm: "h-8",
+  md: "h-12",
 };
 
 export const FCInputBase = {

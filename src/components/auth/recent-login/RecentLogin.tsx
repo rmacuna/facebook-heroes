@@ -1,5 +1,7 @@
 import React from "react";
+
 import Image from "next/image";
+
 import { RecentLoginProps } from "../../common/types";
 
 type Props = {
@@ -14,7 +16,7 @@ export default function RecentLogin({ recentLogin }: Props) {
           <div className="text-blue-500">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
+              className="w-5 h-5"
               viewBox="0 0 20 20"
               fill="currentColor"
             >
@@ -29,7 +31,7 @@ export default function RecentLogin({ recentLogin }: Props) {
         <div className="v-center">
           <button
             role="button"
-            className="bg-none text-blue-500 hover:underline"
+            className="text-blue-500 bg-none hover:underline"
           >
             Add Account
           </button>
@@ -40,16 +42,16 @@ export default function RecentLogin({ recentLogin }: Props) {
 
   return (
     <>
-      <li className="recent-login-card mr-2 border-solid group">
+      <li className="mr-2 border-solid recent-login-card group">
         {/* Badge */}
-        <span className="text-white -m-2 absolute right-0 top-0 z-10 rounded-full w-6 h-6 v-center bg-accent text-sm">
+        <span className="absolute top-0 right-0 z-10 w-6 h-6 -m-2 text-sm text-white rounded-full v-center bg-accent">
           4
         </span>
-        <button className="absolute z-10  transition-colors group-hover:shadow-lg group-hover:bg-white left-0 top-0 m-2 w-6 h-6   rounded-full bg-blackTransparent">
-          <div className="w-full v-center group-hover:text-black text-white transition-colors ">
+        <button className="absolute top-0 left-0 z-10 w-6 h-6 m-2 rounded-full transition-colors group-hover:shadow-lg group-hover:bg-white bg-blackTransparent">
+          <div className="w-full text-white v-center group-hover:text-black transition-colors">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-4 w-4"
+              className="w-4 h-4"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -69,11 +71,11 @@ export default function RecentLogin({ recentLogin }: Props) {
           alt="Capitan América"
           width="200"
           height="200"
-          className="object-cover h-48 w-full rounded-lg"
+          className="object-cover w-full h-48 rounded-lg"
         />
 
         <div className="v-center">
-          <span className=" text-lg p-2 font-semibold cursor-pointer">
+          <span className="p-2 text-lg font-semibold cursor-pointer">
             Steve Rogers
           </span>
         </div>

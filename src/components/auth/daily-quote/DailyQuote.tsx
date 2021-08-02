@@ -1,4 +1,5 @@
 import React, { memo } from "react";
+
 import QUOTES from "../../../constants/quotes";
 /**
  *
@@ -11,7 +12,7 @@ export default memo(function DailyQuote() {
   // Take a random quote from the quote array
   const quote = QUOTES[Math.floor(Math.random() * QUOTES.length)];
   return (
-    <h1 role="heading" className="text-xl font-semibold pb-6">
+    <h1 role="heading" className="pb-6 text-xl font-semibold">
       {quote}
     </h1>
   );

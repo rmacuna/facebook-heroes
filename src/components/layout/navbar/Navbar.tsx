@@ -1,4 +1,5 @@
 import React from "react";
+
 import { NavigationItemProps } from "../../common/types";
 import NavigationList from "./NavigationList";
 import NavLanguagePicker from "./NavLanguagePicker";
@@ -35,8 +36,8 @@ export default function Navbar() {
   return (
     <>
       <nav role="navigation" className="pt-4">
-        <div className="max-w-7xl px-10 mx-auto xl:max-w-7xl">
-          <div className="flex justify-center lg:justify-between items-center">
+        <div className="px-10 mx-auto max-w-7xl xl:max-w-7xl">
+          <div className="flex items-center justify-center lg:justify-between">
             <div className="flex items-center">
               <div className="pr-5">
                 <NavLogo />
