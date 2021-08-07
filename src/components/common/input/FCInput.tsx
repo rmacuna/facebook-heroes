@@ -1,3 +1,5 @@
+import clsx from "clsx";
+
 import { FCInputProps } from "../types";
 import { FCInputBase, FCInputSize } from "./FCInput.theme";
 
@@ -6,6 +8,7 @@ export default function FCInput({
   placeholder,
   inputSize,
   isDisabled,
+  className,
   ...props
 }: FCInputProps) {
   const classNames = FCInputBase.base + " " + FCInputSize[inputSize];
@@ -13,11 +16,11 @@ export default function FCInput({
   return (
     <>
       <input
-        className={classNames}
         role="textbox"
         type={type}
         disabled={isDisabled}
         placeholder={placeholder}
+        className={clsx([classNames, className])}
         {...props}
       />
     </>

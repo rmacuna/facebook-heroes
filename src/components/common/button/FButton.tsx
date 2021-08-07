@@ -7,6 +7,7 @@ export default function FButton({
   type,
   size,
   onClick,
+  ...props
 }: FCButton) {
   const classNames =
     BaseButton.base + " " + ButtonType[type] + " " + ButtonSize[size];
@@ -18,6 +19,7 @@ export default function FButton({
       type="button"
       role="button"
       onClick={onClick}
+      {...props}
     >
       {children}
     </button>

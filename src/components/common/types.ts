@@ -36,12 +36,15 @@ interface Disabable {
   isDisabled?: boolean;
 }
 
-interface FCButtonProps extends Disabable {
-  /**Type of the style in the button*/
-  type?: "primary" | "secondary" | "ghost";
-  /** Text color of the button */
-  size?: "sm" | "md";
+interface WithSize {
+  /** Size of the component */
+  size?: "sm" | "md" | "base";
+}
 
+interface FCButtonProps extends Disabable, WithSize {
+  /**Type of the style in the button*/
+  type?: "primary" | "secondary" | "ghost" | "text";
+  /** Text color of the button */
   onClick?();
 }
 

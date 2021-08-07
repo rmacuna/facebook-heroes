@@ -2,41 +2,52 @@ import React from "react";
 
 import Image from "next/image";
 
+import Modal from "src/components/common/modal/Modal";
+import { useModal } from "src/hooks/use-modal";
+
 import { RecentLoginProps } from "../../common/types";
+import QuickAddAccount from "./QuickAddAccount";
 
 type Props = {
   recentLogin?: RecentLoginProps;
 };
 
 export default function RecentLogin({ recentLogin }: Props) {
+  const { modalOpen, toggle } = useModal();
+
   if (!recentLogin) {
     return (
-      <li className="recent-login-card">
-        <div className="bg-gray-100 v-center">
-          <div className="text-blue-500">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="w-5 h-5"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-            >
-              <path
-                fillRule="evenodd"
-                d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z"
-                clipRule="evenodd"
-              />
-            </svg>
+      <>
+        <Modal isOpen={modalOpen} onClose={toggle}>
+          <QuickAddAccount toggle={toggle} />
+        </Modal>
+        <li onClick={toggle} className="recent-login-card">
+          <div className="bg-gray-100 v-center">
+            <div className="text-blue-500">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-5 h-5"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </div>
           </div>
-        </div>
-        <div className="v-center">
-          <button
-            role="button"
-            className="text-blue-500 bg-none hover:underline"
-          >
-            Add Account
-          </button>
-        </div>
-      </li>
+          <div className="v-center">
+            <button
+              role="button"
+              className="text-blue-500 bg-none hover:underline"
+            >
+              Add Account
+            </button>
+          </div>
+        </li>
+      </>
     );
   }
 

@@ -5,6 +5,9 @@
     }
   ],
   "settings": {
+    "editor.fontFamily": "'JetBrains Mono', Menlo, Monaco, 'Courier New', monospace",
+    "editor.lineHeight": 1.8,
+    "editor.fontLigatures": true,
     "editor.codeActionsOnSave": {
       "source.fixAll.eslint": true,
       "source.fixAll": true
@@ -15,7 +18,7 @@
       "typescript",
       "typescriptreact"
     ],
-    "editor.fontSize": 16,
+    "editor.fontSize": 15,
     "conventionalCommits.scopes": ["Api", "Login"]
   }
 }
