@@ -6,7 +6,7 @@ import { render } from "@testing-library/react";
 import QuickAddAccount from "../QuickAddAccount";
 
 it(`Should render a two textfields and a button`, () => {
-  const { getByRole } = render(<QuickAddAccount />);
+  const { getByRole } = render(<QuickAddAccount toggle={() => null} />);
   const quickAddAccount = getByRole(`textbox`, { name: `email-field` });
   expect(quickAddAccount).toBeInTheDocument();
 });
