@@ -2,8 +2,8 @@ import React from "react";
 
 import Router from "next/router";
 
-import FButton from "src/components/common/button/FButton";
-import FCInput from "src/components/common/input/FCInput";
+import FButton from "components/common/button/FButton";
+import FCInput from "components/common/input/FCInput";
 
 export default function PasswordResetCard() {
   return (

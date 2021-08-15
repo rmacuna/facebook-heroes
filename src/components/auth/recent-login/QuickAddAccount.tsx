@@ -1,8 +1,8 @@
-import FadeDiv from "src/components/common/animated-elements/FadeDiv";
-import FButton from "src/components/common/button/FButton";
-import IconButton from "src/components/common/icon-button/IconButton";
-import { Close } from "src/components/common/icons";
-import Input from "src/components/common/input/FCInput";
+import FadeDiv from "components/common/animated-elements/FadeDiv";
+import FButton from "components/common/button/FButton";
+import IconButton from "components/common/icon-button/IconButton";
+import { Close } from "components/common/icons";
+import Input from "components/common/input/FCInput";
 
 type Props = {
   toggle();

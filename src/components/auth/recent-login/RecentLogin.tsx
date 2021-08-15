@@ -2,8 +2,8 @@ import React from "react";
 
 import Image from "next/image";
 
-import Modal from "src/components/common/modal/Modal";
-import { useModal } from "src/hooks/use-modal";
+import Modal from "components/common/modal/Modal";
+import { useModal } from "hooks/use-modal";
 
 import { RecentLoginProps } from "../../common/types";
 import QuickAddAccount from "./QuickAddAccount";

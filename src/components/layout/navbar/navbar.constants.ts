@@ -1,4 +1,4 @@
-import { NavigationItemProps } from "src/components/common/types";
+import { NavigationItemProps } from "components/common/types";
 
 export const navigationLinks = [
   {
