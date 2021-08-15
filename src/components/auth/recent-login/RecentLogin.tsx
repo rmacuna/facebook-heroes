@@ -53,7 +53,13 @@ export default function RecentLogin({ recentLogin }: Props) {
 
   return (
     <>
-      <li className="mr-2 border-solid recent-login-card group">
+      <Modal isOpen={modalOpen} onClose={toggle}>
+        <QuickAddAccount toggle={toggle} imageUrl="/captainAmerica.jpeg" />
+      </Modal>
+      <li
+        onClick={toggle}
+        className="mr-2 border-solid recent-login-card group"
+      >
         {/* Badge */}
         <span className="absolute top-0 right-0 z-10 w-6 h-6 -m-2 text-sm text-white rounded-full v-center bg-accent">
           4

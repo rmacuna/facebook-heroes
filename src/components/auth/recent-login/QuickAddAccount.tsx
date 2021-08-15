@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import FadeDiv from "components/common/animated-elements/FadeDiv";
 import FButton from "components/common/button/FButton";
 import IconButton from "components/common/icon-button/IconButton";
@@ -6,29 +8,51 @@ import Input from "components/common/input/FCInput";
 
 type Props = {
   toggle();
+  imageUrl?: string;
 };
-export default function QuickAddAccount({ toggle }: Props) {
+export default function QuickAddAccount({ toggle, imageUrl }: Props) {
   return (
     <>
-      <div className="relative w-full mx-auto my-6 lg:w-1/4 md:max-w-3xl">
+      <div className="relative w-full my-6 md:max-w-lg">
         <FadeDiv className="relative flex flex-col w-full bg-white border-0 shadow-lg outline-none divide-y divide-gray-200 dark:divide-darkGray-light rounded-3xl dark:bg-darkGray focus:outline-none">
           <IconButton onClick={toggle}>
             <Close />
           </IconButton>
-          <div className="px-4 py-6 text-center border-b">
-            <h1 role="heading" className="text-2xl font-bold">
-              Log into Facebook{" "}
-            </h1>
+
+          <div className="items-center justify-center px-4 py-6 text-center border-b">
+            {imageUrl ? (
+              <>
+                <div className="w-full">
+                  <Image
+                    src={imageUrl}
+                    width={250}
+                    className="rounded-full"
+                    height={250}
+                    alt="Profile picture"
+                  />
+                </div>
+                <div className="text-center">
+                  <span className="font-semibold text-md">Steve Rogers</span>
+                </div>
+              </>
+            ) : (
+              <h1 role="heading" className="text-2xl font-bold">
+                Log into Facebook{" "}
+              </h1>
+            )}
           </div>
 
           <div className="px-4 py-4 border-b">
-            <Input
-              name="email-field"
-              role="textbox"
-              type="text"
-              placeholder="Email of phone number"
-              className="mb-2"
-            />
+            {!imageUrl && (
+              <Input
+                name="email-field"
+                role="textbox"
+                type="text"
+                placeholder="Email of phone number"
+                className="mb-2"
+              />
+            )}
+
             <Input
               placeholder="Password"
               name="password-field"
@@ -56,3 +80,7 @@ export default function QuickAddAccount({ toggle }: Props) {
     </>
   );
 }
+
+QuickAddAccount.defaultProps = {
+  imageUrl: null,
+};

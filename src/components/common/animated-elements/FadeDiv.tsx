@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 
 // Add props with children
-export default function FadeDiv({ children, ...props }) {
+export default function FadeDiv({ ...props }) {
   return (
     <motion.div
       initial={{
@@ -18,7 +18,7 @@ export default function FadeDiv({ children, ...props }) {
       }}
       {...props}
     >
-      {children}
+      {props.children}
     </motion.div>
   );
 }
