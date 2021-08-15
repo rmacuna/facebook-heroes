@@ -1,7 +1,7 @@
 import React from "react";
 
-import PasswordResetCard from "src/components/auth/password-reset-card/PasswordResetCard";
-import NavLogo from "src/components/layout/navbar/NavLogo";
+import PasswordResetCard from "components/auth/password-reset-card/PasswordResetCard";
+import NavLogo from "components/layout/navbar/NavLogo";
 
 export default function PasswordRecover() {
   return (

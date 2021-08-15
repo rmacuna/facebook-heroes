@@ -1,8 +1,8 @@
-import { ChangeEvent, useState } from "react";
+import { ChangeEvent, useState, memo } from "react";
 
 import FCInput from "../../common/input/FCInput";
 
-export default function LoginForm() {
+export default memo(function LoginForm() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -40,4 +40,4 @@ export default function LoginForm() {
       </form>
     </>
   );
-}
+});

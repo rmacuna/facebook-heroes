@@ -1,4 +1,3 @@
-import {} from "@components/common/types";
 import FadeDiv from "src/components/common/animated-elements/FadeDiv";
 import FButton from "src/components/common/button/FButton";
 import IconButton from "src/components/common/icon-button/IconButton";

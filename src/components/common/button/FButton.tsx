@@ -1,16 +1,18 @@
-import { FCButton } from "../types";
-import { BaseButton, ButtonSize, ButtonType } from "./FButton.theme";
+import { memo } from "react";
 
-export default function FButton({
+import { FCButton } from "../types";
+import { BaseButtonStyles, ButtonSize, ButtonType } from "./FButton.theme";
+
+const BaseButton = ({
   isDisabled,
   children,
   type,
   size,
   onClick,
   ...props
-}: FCButton) {
+}: FCButton) => {
   const classNames =
-    BaseButton.base + " " + ButtonType[type] + " " + ButtonSize[size];
+    BaseButtonStyles.base + " " + ButtonType[type] + " " + ButtonSize[size];
 
   return (
     <button
@@ -24,6 +26,11 @@ export default function FButton({
       {children}
     </button>
   );
+};
+
+const MemoizedButton = memo(BaseButton);
+export default function FButton({ ...props }: FCButton) {
+  return <MemoizedButton {...props} />;
 }
 
 FButton.defaultProps = {

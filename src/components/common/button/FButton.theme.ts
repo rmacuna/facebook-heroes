@@ -21,6 +21,6 @@ export const ButtonSize = {
   sm: "py-2 px-2",
 };
 
-export const BaseButton = {
+export const BaseButtonStyles = {
   base: "rounded-lg font-semibold w-full disabled:bg-gray-300 disabled:text-gray-800 transition-all  active:transform active:scale-95 focus:outline-none focus:ring-2",
 };

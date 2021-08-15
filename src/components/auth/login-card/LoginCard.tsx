@@ -1,5 +1,3 @@
-import React from "react";
-
 import Link from "next/link";
 
 import { useModal } from "../../../hooks/use-modal";
@@ -18,13 +16,10 @@ export default function LoginCard() {
       </Modal>
       <div className="flex flex-col order-1 lg:order-2">
         <section className="w-full bg-white border border-gray-200 lg:max-w-md divide-y-2 lg:border-none lg:shadow-xl rounded-md">
-          {/* Card Login Header And Content */}
           <div className="pt-4 pb-2 px-7">
             <DailyQuote />
-            {/* Form */}
             <LoginForm />
             <div className="w-full pb-4">
-              {/* Button Component */}
               <FButton>Log In</FButton>
             </div>
             <div className="flex justify-center w-full">
@@ -35,13 +30,12 @@ export default function LoginCard() {
               </Link>
             </div>
           </div>
-          <div className="flex items-center justify-center p-6 text-center">
-            <button
-              onClick={toggle}
-              className="p-3 text-lg font-semibold text-white rounded-lg bg-secondary-500 focus:outline-none focus:ring-2 focus:ring-green-500 hover:bg-secondary-600 transition-transform active:transform active:scale-95"
-            >
-              Create New Account
-            </button>
+          <div className=" flex items-center justify-center p-6 text-center ">
+            <div className="w-full lg:w-6/12">
+              <FButton onClick={toggle} type="secondary">
+                Create New Account
+              </FButton>
+            </div>
           </div>
         </section>
         {/* Create Page For Bussiness Component */}

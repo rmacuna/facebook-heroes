@@ -1,28 +1,13 @@
 import React from "react";
 
-import { motion } from "framer-motion";
+import FadeDiv from "components/common/animated-elements/FadeDiv";
+import FCInput from "components/common/input/FCInput";
 
-type Props = {};
-
-export default function CreateNewAccount(props: Props) {
+export default function CreateNewAccount() {
   return (
     <>
       <div className="relative w-full mx-auto my-6 lg:w-4/12 md:max-w-3xl">
-        <motion.div
-          initial={{
-            scale: 0.8,
-            y: 200,
-          }}
-          animate={{
-            scale: 1,
-            y: 0,
-          }}
-          transition={{
-            duration: 0.2,
-            ease: "easeOut",
-          }}
-          className="relative flex flex-col w-full bg-white border-0 shadow-lg outline-none divide-y divide-gray-200 dark:divide-darkGray-light rounded-3xl dark:bg-darkGray focus:outline-none"
-        >
+        <FadeDiv className="relative flex flex-col w-full bg-white border-0 shadow-lg outline-none divide-y divide-gray-200 dark:divide-darkGray-light rounded-3xl dark:bg-darkGray focus:outline-none">
           <div className="px-4 py-3 border-b">
             <h1 className="text-3xl font-bold">Sign Up</h1>
             <p className="text-sm text-gray-600">It’s quick and easy </p>
@@ -31,29 +16,19 @@ export default function CreateNewAccount(props: Props) {
             {/* Input Component */}
 
             <div className="flex pb-2">
-              <input
-                type="text"
-                placeholder="First name"
-                className="w-full px-4 py-2 mr-3 bg-gray-100 border border-gray-300 rounded-lg"
-              />
-
-              <input
-                type="text"
-                placeholder="Last name"
-                className="w-full px-4 py-2 bg-gray-100 border border-gray-300 rounded-lg"
-              />
+              <FCInput type="text" placeholder="First name" className="mr-3" />
+              <FCInput type="text" placeholder="Last name" />
             </div>
 
-            <input
-              type="email"
+            <FCInput
+              type="text"
               placeholder="Mobile number of email"
-              className="w-full px-4 py-2 mb-2 mr-3 bg-gray-100 border border-gray-300 rounded-lg"
+              className="mb-2"
             />
-
-            <input
+            <FCInput
               type="password"
               placeholder="New password"
-              className="w-full px-4 py-2 mb-3 mr-3 bg-gray-100 border border-gray-300 rounded-lg"
+              className="mb-2"
             />
 
             {/* New section: Date of birthday */}
@@ -199,7 +174,7 @@ export default function CreateNewAccount(props: Props) {
               </div>
             </div>
           </div>
-        </motion.div>
+        </FadeDiv>
       </div>
     </>
   );

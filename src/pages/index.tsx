@@ -1,6 +1,6 @@
-import LoginCard from "../components/auth/login-card/LoginCard";
-import WelcomeSection from "../components/auth/welcome/WelcomeSection";
-import Navbar from "../components/layout/navbar/Navbar";
+import LoginCard from "components/auth/login-card/LoginCard";
+import WelcomeSection from "components/auth/welcome/WelcomeSection";
+import Navbar from "components/layout/navbar/Navbar";
 
 export default function Login() {
   return (
