@@ -31,3 +31,30 @@ export const navigationLinks = [
     title: "More",
   },
 ] as NavigationItemProps[];
+
+export const LANGUAGE_LIST_POPOVER = [
+  {
+    name: "English",
+  },
+  {
+    name: "Español",
+  },
+  {
+    name: "Français",
+  },
+  {
+    name: "Italiano",
+  },
+  {
+    name: "Deutsch",
+  },
+  {
+    name: "Português",
+  },
+  {
+    name: "中文",
+  },
+  {
+    name: "한국어",
+  },
+];

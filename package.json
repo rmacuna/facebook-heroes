@@ -19,6 +19,8 @@
     ]
   },
   "dependencies": {
+    "@headlessui/react": "^1.4.0",
+    "@heroicons/react": "^1.0.3",
     "clsx": "^1.1.1",
     "framer-motion": "^4.1.17",
     "jest-environment-jsdom": "^27.0.6",
